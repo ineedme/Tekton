@@ -14,6 +14,9 @@ class Status(models.Model):
 
 
 class Product(models.Model):
+    """
+    Product Model
+    """
     name = models.CharField(max_length=255)
     status = models.ForeignKey(Status, on_delete=models.CASCADE, related_name='statuses')
     stock = models.IntegerField()
